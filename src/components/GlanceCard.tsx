@@ -16,7 +16,7 @@ interface GlanceCardProps {
 const GlanceCard = ({ data }: GlanceCardProps) => {
   const { icon, title, no, percentage, status } = data;
   return (
-    <div className="card border shadow-lg flex flex-col justify-between">
+    <div className="bg-white w-full  h-[156px] rounded-2xl p-6 gap-4 border shadow-lg flex flex-col justify-between">
       <div className="flex items-center gap-1">
         <Image src={icon} alt="icon" width={15} height={15} />
         <h1 className="text-[12px] font-medium tracking-wider">{title}</h1>
@@ -34,8 +34,7 @@ const GlanceCard = ({ data }: GlanceCardProps) => {
           <span
             className={`${
               status === "increase" ? "text-[#15B79F]" : "text-[#F04438]"
-            }`}
-          >
+            }`}>
             {percentage}%
           </span>
           <span>{status}</span>
